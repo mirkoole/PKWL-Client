@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <title>PKWL: Auth</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+  <script language="JavaScript" type="text/javascript" src="../rsa/BigInt.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../rsa/Barrett.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../rsa/RSA.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/aes.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/asn1.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/prng.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/sha1.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/md.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/jsbn.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/util.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/random.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/rsa.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../tlp/BigInt.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../pkwl/database.js?v=1"></script>
+  <script language="JavaScript" type="text/javascript" src="../pkwl/popup.js?v=1"></script>
+</head>
+<body>
+
+<iframe src="navi.html" class="navi"></iframe>
+
+<h1>Login: <div id="hostname" style="display:inline;"> </div></h1>
+
+<form id="pkwl" name="pkwl" onsubmit="return false;" action="." method="POST">
+
+  <input type="hidden" name="pkwl_action"    id="action"    value="auth"/>
+  <input type="hidden" name="pkwl_timestamp" id="timestamp" value=""/>
+  <input type="hidden" name="pkwl_nonce"     id="nonce"     value=""/>
+  <input type="hidden" name="pkwl_data"      id="data"      value=""/>
+  <input type="hidden" name="pkwl_protocol"  id="protocol"  value=""/>
+
+  <label>Your Username:</label>
+  <select id="username" name="pkwl_username"><option value="0" disabled="">None</option></select>
+
+  <br/>
+  <br/>
+
+  <label>&nbsp;</label>
+  <input type="button" id="LoginButton" value="Login"/>
+
+</form>
+
+<br/>
+
+<div id="MessageLog"> </div>
+
+</form>
+
+</body>
+</html>

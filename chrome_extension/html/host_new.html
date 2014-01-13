@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <title>PKWL: New Host</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+  <script language="JavaScript" type="text/javascript" src="../rsa/BigInt.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../rsa/Barrett.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../rsa/RSA.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/aes.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/asn1.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/prng.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/sha1.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/md.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/jsbn.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/util.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/random.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/rsa.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../pkwl/database.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../pkwl/key_management.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../pkwl/host_new.js"></script>
+</head>
+<body>
+
+<iframe src="navi.html" class="navi"></iframe>
+
+<h1>New Host: <div id="hostname" style="display:inline;"> </div></h1>
+
+<form id="pkwl" name="pkwl" onsubmit="return false;" action="." method="POST">
+
+  <label>Your Username:</label>
+  <input id="username" name="username" type="text" value="" size="30"/>
+
+  <br/><br/>
+
+  Select a key here or generate a new key below.
+
+  <br/><br/>
+
+  <label>Your Keys:</label>
+  <select id="keys" name="keys"><option value="0" disabled="">None</option></select>
+
+  <br/><br/>
+
+  <label>Public-Key:</label>
+  <input id="publickey" name="publickey" type="text" value="" disabled="" size="30"/>
+
+  <br/><br/>
+
+  <label>New Key Name:</label>
+  <input id="new_key_name" name="new_key_name" type="text" value=""/>
+  <input id="GenerateKeyButton" name="GenerateKeyButton" type="button" value="Generate New Key"/>
+
+  <br/><br/>
+
+  <label>&nbsp;</label>
+  <input id="SaveButton" name="SaveButton" type="button" value="Save Configuration!"/><br/>
+
+</form>
+
+<br/>
+
+<div id="MessageLog"> </div>
+
+</body>
+</html>

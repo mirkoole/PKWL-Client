@@ -1,0 +1,35 @@
+body {
+  font-family: sans-serif;
+  overflow-x: hidden;
+  width: 500px;
+}
+
+.navi {
+  border:0;
+  height:35px;
+  padding:0;
+  width:100%;
+}
+
+select {
+min-width:150px;
+}
+
+label {
+float:left;
+font-weight:bold;
+line-height:20px;
+padding-right:10px;
+text-align:right;
+width:150px;
+}
+
+input, select {
+border:1px solid #555;
+}
+
+#LoginButton {
+box-shadow: 1px 1px 5px #555;
+font-weight:bold;
+padding:7px 20px;
+}

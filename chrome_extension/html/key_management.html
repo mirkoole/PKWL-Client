@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+  <title>PKWL: Key Management</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+  <script language="JavaScript" type="text/javascript" src="../rsa/BigInt.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../rsa/Barrett.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../rsa/RSA.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/aes.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/asn1.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/prng.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/sha1.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/md.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/jsbn.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/util.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/random.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../forge/rsa.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../pkwl/database.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../pkwl/key_management.js"></script>
+</head>
+<body>
+
+<iframe src="navi.html" class="navi"></iframe>
+
+<h1>Key Management</h1>
+
+<form action="." method="POST" onsubmit="return false;">
+
+  <label>New Key Name:</label>
+  <input id="new_key_name" name="new_key_name" type="text" value=""/>
+  <input id="GenerateKeyButton" name="GenerateKeyButton" type="button" value="Generate New Key"/>
+
+  <br/><br/>
+
+  <label>Available Keys:</label>
+  <select id="keys" name="keys"><option value="0" disabled="">None</option></select>
+
+  <br/><br/>
+
+  <label>Public-Key:</label>
+  <input id="publickey" name="publickey" type="text" value="" disabled="" size="30"/>
+
+  <br/><br/>
+
+  <label>&nbsp;</label>
+  <input id="DeleteKeyButton" type="button" value="Delete Key"/>
+
+  <br/><br/>
+
+  <h1>Import Key</h1>
+
+  <label>Key Name:</label>
+  <input id="import_name" name="import_name" type="text" value=""/>
+
+  <br/><br/>
+
+  <label for="import_n">RSA-Modulus (N):</label>
+  <input id="import_n" name="n" type="text" value=""/>
+  <br/>
+
+  <label for="import_e">Public Exp. (e):</label>
+  <input id="import_e" name="e" type="text" value="0x10001" disabled=""/>
+  <br/>
+
+  <label for="import_d">Private Exp. (d):</label>
+  <input id="import_d" name="d" type="text" value=""/>
+  <br/>
+  <br/>
+
+  <label>&nbsp;</label>
+  <input id="ImportKeyButton" type="button" value="Import Key"/>
+
+</form>
+
+<br/>
+
+<div id="MessageLog"> </div>
+
+</body>
+</html>

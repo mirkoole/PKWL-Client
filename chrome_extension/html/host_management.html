@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <title>PKWL: Host Management</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+  <script language="JavaScript" type="text/javascript" src="../pkwl/database.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../pkwl/host_management.js"></script>
+</head>
+<body>
+
+<iframe src="navi.html" class="navi"></iframe>
+
+<h1>Host Management</h1>
+
+<form action="." method="POST" onsubmit="return false;">
+
+  <label>Available Hosts:</label>
+  <select id="hosts" name="hosts"><option value="0" disabled="">None</option></select>
+
+  <br/><br/>
+
+  <label>&nbsp;</label>
+  <input id="DeleteButton" type="button" value="Delete Selected Configuration"/>
+
+</form>
+
+<br/>
+
+<div id="MessageLog"> </div>
+
+</body>
+</html>
