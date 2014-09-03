@@ -76,7 +76,7 @@ var popup = {
   * send auth-request, handle tlp, handle decryption, handle cookies
   */
   auth: function(){
-    console.log("OK: popup.auth() called!");
+    //console.log("OK: popup.auth() called!");
 
     // get vars from form
     var hostname = document.getElementById('hostname').innerHTML;
@@ -216,7 +216,7 @@ var popup = {
 
                 // set cookie via chrome api
                 chrome.cookies.set({ url: c[0], name: c[1], value: c[2], path: c[3], expirationDate: c[4], httpOnly: true }, function(cookie){
-                  console.log("OK: Cookie set!");
+                  //console.log("OK: Cookie set!");
                 });
 
               } catch(e){
@@ -251,7 +251,7 @@ var popup = {
   * query saved hostnames
   */
   init: function(){
-    console.log("OK: pkwl.init() called!");
+    //console.log("OK: pkwl.init() called!");
     try {
       // get active tab url
       chrome.tabs.query({'active':true}, function(tabs){

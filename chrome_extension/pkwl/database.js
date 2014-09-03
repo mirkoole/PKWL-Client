@@ -14,14 +14,14 @@ var dbversion = 1;
 var pkwl = {
 
   initDatabase: function(){
-    console.log("OK: pkwl.initDatabase() called!");
+    //console.log("OK: pkwl.initDatabase() called!");
 
     // api call to create/open database
     var openrequest = indexedDB.open('pkwl', dbversion);
 
     // this event is fired when the db does not exist or the structure has changed
     openrequest.onupgradeneeded = function(){
-      console.log("OK: DB-event 'onupgradeneeded' called!");
+      //console.log("OK: DB-event 'onupgradeneeded' called!");
 
       var db = this.result;
       var store;
