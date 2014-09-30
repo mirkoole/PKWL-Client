@@ -62,8 +62,8 @@ var popup = {
     } catch(e) {
 
       // message the user about the error      
-      console.log("ERROR: XMLHttpRequest not supported! Pleas update your client!", e);
-      log("ERROR: XMLHttpRequest not supported! Pleas update your client!");
+      console.log("ERROR: XMLHttpRequest not supported! Please update your client!", e);
+      log("ERROR: XMLHttpRequest not supported! Please update your client!");
 
       // re-enable button
       popup.buttonReset();
