@@ -175,7 +175,11 @@ function getKeyData(){
   var keyid = document.getElementById("keys").value;
 
   // check id
-  if(keyid == 0) return;
+  if(keyid == 0) {
+    // clear the field
+    document.getElementById("publickey").value = "";
+    return;
+  }
 
   // query key from db
   pkwl.getKey(keyid, function(returnedkey){
