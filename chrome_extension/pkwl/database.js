@@ -141,6 +141,9 @@ var pkwl = {
       // used to decide whether we should redirect the user to the "new host"-page
       var foundHost   = false;
 
+      // add always "None"-element
+      document.getElementById(resultid).innerHTML += '<option value="0">None</option>';
+
       // we found a result
       request.onsuccess = function(event){
 
