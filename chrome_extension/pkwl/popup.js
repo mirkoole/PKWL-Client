@@ -150,6 +150,13 @@ var popup = {
                     log("ERROR: Please add a public-key to your account.");
                     popup.buttonReset();
                     return;
+
+            default:
+                    if(result.substring(0,1) == "<"){
+                      console.log("ERROR: SERVER ANSWER INVALID");
+                      log("ERROR: Server gave an invalid answer. :(")
+                      return;
+                    }
           }
 
           // handle input
@@ -202,6 +209,8 @@ var popup = {
             for(var i = 0; i < ciphertext.length; i++){
               plaintext += decryptedString(key, ciphertext[i]);
             }
+
+            //console.log("OK: plaintext", plaintext);
 
             // parse cookiestring
             var cookiedata = plaintext.split(";");
